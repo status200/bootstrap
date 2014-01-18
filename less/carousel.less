@@ -66,26 +66,28 @@
 
 .carousel-control {
   position: absolute;
-  top: 0;
+  bottom: 0px;
   left: 0;
-  bottom: 0;
   width: @carousel-control-width;
+  margin-top: -30px;
+  padding: 18px 0px 14px 0px;
   .opacity(@carousel-control-opacity);
   font-size: @carousel-control-font-size;
   color: @carousel-control-color;
   text-align: center;
   text-shadow: @carousel-text-shadow;
+  background: rgba(0, 0, 0, .6);
   // We can't have this transition here because WebKit cancels the carousel
   // animation if you trip this while in the middle of another animation.
 
   // Set gradients for backgrounds
   &.left {
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+    //#gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
   }
   &.right {
     left: auto;
     right: 0;
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+    //#gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
   }
 
   // Hover/focus state
@@ -102,18 +104,18 @@
   .icon-next,
   .glyphicon-chevron-left,
   .glyphicon-chevron-right {
-    position: absolute;
-    top: 50%;
-    z-index: 5;
+    //position: absolute;
+    //top: 50%;
+    //z-index: 5;
     display: inline-block;
   }
   .icon-prev,
   .glyphicon-chevron-left {
-    left: 50%;
+    //left: 50%;
   }
   .icon-next,
   .glyphicon-chevron-right {
-    right: 50%;
+    //right: 50%;
   }
   .icon-prev,
   .icon-next {
@@ -143,22 +145,25 @@
 
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   z-index: 15;
   width: 60%;
   margin-left: -30%;
+  margin-bottom: 0px;
   padding-left: 0;
   list-style: none;
   text-align: center;
 
   li {
     display: inline-block;
-    width:  10px;
-    height: 10px;
-    margin: 1px;
+    width:  15px;
+    height: 15px;
+    //margin: 1px;
+    margin: 0px 4px;
     text-indent: -999px;
-    border: 1px solid @carousel-indicator-border-color;
+    background-color: #fff;
+    //border: 1px solid @carousel-indicator-border-color;
     border-radius: 10px;
     cursor: pointer;
 
@@ -170,14 +175,23 @@
     //
     // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
     // set alpha transparency for the best results possible.
-    background-color: #000 \9; // IE8
-    background-color: rgba(0,0,0,0); // IE9
+    //background-color: #000 \9; // IE8
+    //background-color: rgba(0,0,0,0); // IE9
   }
   .active {
-    margin: 0;
-    width:  12px;
-    height: 12px;
+    //margin: 0;
+    //width:  12px;
+    //height: 12px;
     background-color: @carousel-indicator-active-bg;
+  }
+  .active:before{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: @brand-primary;
+    border-radius: 3px;
+    margin: 4px 0px 0px 4px;
   }
 }
 

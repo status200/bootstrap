@@ -19,7 +19,7 @@
 // -------------------------
 
 @brand-primary:         #27ad5f;
-@brand-primary-darker:  #1b904c;
+@brand-primary-darker:  #198c49;
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -40,7 +40,8 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+//@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "HelveticaNeueW01-55Roma", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
@@ -60,7 +61,7 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 @headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-weight:    600;
 @headings-line-height:    1.1;
 @headings-color:          @brand-primary;
 
@@ -91,7 +92,7 @@
 @line-height-large:              1.33;
 @line-height-small:              1.5;
 
-@border-radius-base:             0px;
+@border-radius-base:             4px;
 @border-radius-large:            6px;
 @border-radius-small:            3px;
 
@@ -154,9 +155,11 @@
 @input-bg-disabled:              @gray-lighter;
 
 @input-color:                    @gray;
-@input-border:                   #ccc;
+//@input-border:                   #ccc;
+@input-border:                   #ababab;
 @input-border-radius:            @border-radius-base;
-@input-border-focus:             #66afe9;
+//@input-border-focus:             #66afe9;
+@input-border-focus:             @brand-primary;
 
 @input-color-placeholder:        @gray-light;
 
@@ -602,7 +605,7 @@
 @carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
 
 @carousel-control-color:                      #fff;
-@carousel-control-width:                      15%;
+@carousel-control-width:                      69px;
 @carousel-control-opacity:                    .5;
 @carousel-control-font-size:                  20px;
 
